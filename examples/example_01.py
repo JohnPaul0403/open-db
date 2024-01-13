@@ -1,10 +1,4 @@
-###
-#       This is the init file for the manager 
-#       of the database
-#
-###
-
-from classes import Client
+from open_pydb import Client
 
 client = Client()
 

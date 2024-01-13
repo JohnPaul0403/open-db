@@ -1,5 +1,5 @@
 import unittest
-from open_db_JOHN_PAUL.data_model import Data
+from open_pydb import Data
 class TestDataClass(unittest.TestCase):
 
     def test_init(self):

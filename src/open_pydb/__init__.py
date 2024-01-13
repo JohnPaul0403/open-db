@@ -1,11 +1,82 @@
+###
+#       This is the init file for the manager 
+#       of the database
+#       
+#       In this file is only the client Class
+#
+###
 #_______ Imports _______#
 
 import os
 import json
 
-from data_model import Data, from_json
-
 #_____________________________________Classes initialization____________________________________________#
+
+class Data:
+    def __init__(self, *args, **kwargs) -> None:
+        """
+        Class data, for strudcturing and saing data in database
+
+        Parameters:
+            *args: Variable length argument list.
+            **kwargs: Arbitrary keyword arguments.
+
+        Returns:
+            None
+
+        Methods:
+            __init__: Initializes the class by setting the attributes of the object based on the given keyword arguments.
+            to_json: Returns a JSON representation of the object.
+            __ne__: Compares the object with another object for inequality.
+            __eq__: Compares the object with another object for equality.
+            __hash__: Returns the hash value of the object.
+            __repr__: Returns a string representation of the object.
+            __str__: Returns a string representation of the object.
+            __iter__: Returns an iterator for the object.
+            __len__: Returns the number of attributes in the object.
+            __getitem__: Returns the value of an attribute given its key.
+            __setitem__: Sets the value of an attribute given its key.
+        """
+        for key, valure in kwargs.items():
+            setattr(self, key, valure)
+
+    def to_json(self):
+        """
+        Convert the object to JSON format.
+        Returns:
+            The object itself in JSON format.
+        """
+        return self.__dict__
+    
+    def __ne__(self, __value: object) -> bool:
+        return not self.__eq__(__value)
+    
+    def __eq__(self, __value: object) -> bool:
+        return self.__dict__ == __value
+    
+    def __hash__(self) -> int:
+        return hash(tuple(self.__dict__.values()))
+    
+    def __repr__(self) -> str:
+        return str(self.__dict__)
+    
+    def __str__(self) -> str:
+        return str(self.__dict__)
+    
+    def __iter__(self):
+        return iter(self.__dict__)
+    
+    def __len__(self):
+        return len(self.__dict__)
+    
+    def __getitem__(self, key):
+        return self.__dict__[key]
+    
+    def __setitem__(self, key, value):
+        self.__dict__[key] = value
+
+def from_json(data:dict):
+    return Data(**data)
 
 class Collection:
     def __init__(self, name: str, path: str) -> None:

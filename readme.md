@@ -11,13 +11,13 @@ Open-PyDB is a simple, lightweight, and flexible open-source database for that a
 ### For Windows
 
 ```Python
-pip install open-db
+pip install open-pydb
 ```
 
 ### For Mac and Linux
 
 ```Python
-pip3 install open-db
+pip3 install open-pydb
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ pip3 install open-db
 Here's an example of how to use Open-DB:
 
 ```Python
-from open_db import Client
+from open_pydb import Client
 
 # Create a new client
 client = Client()
@@ -51,7 +51,7 @@ collections[0].delete_data(collections[0].data)
 Open-DB uses a simple data model based on the Data class. Here's an example of how to use the Data class:
 
 ```Python
-from open_db_JOHN_PAUL.data_model import Data
+from open_pydb import Data
 
 # Create a new data object
 data = Data(foo='bar', baz=42)
