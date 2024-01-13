@@ -1,8 +1,8 @@
-# Open-DB
+# Open-PyDB
 
 An unstructured database module for Python
 
-Open-DB is a simple, lightweight, and flexible open-source database for that allows users to make use of unstruct data. It provides a simple, flexible and extensible way to data. The project contains the code for a simple database manager using a Client class to interact with a database The database manager supports creating and deleting databases and collections, as well as adding and deleting data from collections.
+Open-PyDB is a simple, lightweight, and flexible open-source database for that allows users to make use of unstruct data. It provides a simple, flexible and extensible way to data. The project contains the code for a simple database manager using a Client class to interact with a database The database manager supports creating and deleting databases and collections, as well as adding and deleting data from collections.
 
 ---
 
