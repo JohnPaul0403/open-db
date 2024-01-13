@@ -73,4 +73,4 @@ Open-DB is released under the MIT License. See the LICENSE file for details.
 
 ## Contact
 
-For any questions or issues, please feel free to contact at [johnpar2004@gaml.com](johnpar2004@gaml.com).
+For any questions or issues, please feel free to contact at [johnpar2004@gaml.com](johnpar2004@gmail.com).
